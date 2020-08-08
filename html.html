@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Submit Name</title>
+</head>
+<body bgcolor="red" background="3.jpeg">
+    <form id="submit-form" action="">
+    <div>
+        <div><p style="background-color: azure; width: 60px;">Name :</p><input type="text" id="fname" name="name" placeholder="Enter Your Name....."></div><br>
+        <div><button>Submit</button></div>
+    </div>
+    </form>
+    <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbwDp0o8FmEsB8VKBa1_QA72GDv9evbNnRNBjZQUJNzCKpbWqSQ/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    window.location.reload()
+                    window.location.href="index.html"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
+</body>
+</html>
+
+
+
+<!-- https://script.google.com/macros/s/AKfycbwDp0o8FmEsB8VKBa1_QA72GDv9evbNnRNBjZQUJNzCKpbWqSQ/exec -->
