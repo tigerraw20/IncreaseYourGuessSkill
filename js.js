@@ -63,7 +63,7 @@ function main()
          if(i<0)
          {
              alert('👍 Your chances are over!!!');
-             alert('You won the '+ 'level '+n + " 👌");
+             alert('You won the '+ 'level '+(n-1) + " 👌");
             location.reload()
          }
 }
